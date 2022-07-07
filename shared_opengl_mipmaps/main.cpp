@@ -1,6 +1,6 @@
 #include "../common.hpp"
-
-//#define REPRODUCE_BUG
+ 
+#define REPRODUCE_BUG
 
 std::string kernel_src = R"(
 #pragma OPENCL EXTENSION cl_khr_mipmap_image : enable
@@ -28,7 +28,7 @@ GLuint make_texture()
 
     for(int i=0; i < 1024 * 1024; i++)
     {
-        cols[i] = 255;
+        cols[i] = 0xFFFFFFFF;
     }
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
