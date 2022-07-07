@@ -1,0 +1,1 @@
+g++ main.cpp -lglfw3 -lglew32 -lopengl32 -lopencl && a.exe
