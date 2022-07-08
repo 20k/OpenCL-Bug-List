@@ -95,9 +95,6 @@ std::pair<cl_context, cl_device_id> boot_opencl(bool use_opengl)
     {
         cl_context_properties props[] =
         {
-            CL_GL_CONTEXT_KHR, (cl_context_properties)wglGetCurrentContext(),
-            CL_WGL_HDC_KHR, (cl_context_properties)wglGetCurrentDC(),
-            CL_CONTEXT_PLATFORM, (cl_context_properties)platform,
             0
         };
 

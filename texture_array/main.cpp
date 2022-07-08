@@ -70,9 +70,7 @@ void fill_array(cl_command_queue cqueue, cl_mem mem)
 
 int main()
 {
-    GLFWwindow* window = boot_opengl();
-
-    auto [ctx, selected_device] = boot_opencl(true);
+    auto [ctx, selected_device] = boot_opencl(false);
 
     std::vector<std::pair<cl_kernel, std::string>> kernels = build_kernels(ctx, selected_device, kernel_src);
 
